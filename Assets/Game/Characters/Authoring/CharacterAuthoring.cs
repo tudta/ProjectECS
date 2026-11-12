@@ -13,6 +13,7 @@ public class CharacterAuthoring : MonoBehaviour
     [Header("Stats")]
     public float MaxHealth = 100f;
     public float MovementSpeed = 5f;
+    public float Armor;
 
     public class Baker : Baker<CharacterAuthoring>
     {
@@ -44,6 +45,11 @@ public class CharacterAuthoring : MonoBehaviour
             AddComponent(entity, new MovementSpeed
             {
                 Value = authoring.MovementSpeed
+            });
+
+            AddComponent(entity, new Armor
+            {
+                Value = authoring.Armor
             });
         }
     }
