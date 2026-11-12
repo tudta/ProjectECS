@@ -27,6 +27,7 @@ public class CharacterAuthoring : MonoBehaviour
             if (authoring.IsPlayer)
             {
                 AddComponent<PlayerTag>(entity);
+                AddComponent<CharacterMoveCommand>(entity);
             }
 
             AddComponent(entity, new CharacterFaction
