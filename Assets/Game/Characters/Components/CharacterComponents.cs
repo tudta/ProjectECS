@@ -2,10 +2,12 @@ using Unity.Entities;
 
 public struct CharacterTag : IComponentData
 {
+    
 }
 
 public struct PlayerTag : IComponentData
 {
+    
 }
 
 public struct CharacterFaction : IComponentData
