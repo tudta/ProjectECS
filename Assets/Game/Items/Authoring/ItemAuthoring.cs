@@ -22,6 +22,10 @@ public class ItemAuthoring : MonoBehaviour
     [Header("Stat Modifiers")]
     public ItemModifierEntry[] Modifiers;
 
+    [Header("Consumable Effect")]
+    public ConsumableEffectType EffectType;
+    public float EffectValue;
+
     public class Baker : Baker<ItemAuthoring>
     {
         public override void Bake(ItemAuthoring authoring)
@@ -33,7 +37,10 @@ public class ItemAuthoring : MonoBehaviour
                 Id = authoring.Id,
                 Type = authoring.Type,
                 MaxStack = Mathf.Max(1, authoring.MaxStack),
-                Slot = authoring.Slot
+                Slot = authoring.Slot,
+
+                EffectType = authoring.EffectType,
+                EffectValue = authoring.EffectValue
             });
 
             DynamicBuffer<ItemStatModifier> modifiers =

@@ -108,3 +108,5 @@ MonoBehaviour:
   MaxStack: 20
   Slot: 0
   Modifiers: []
+  EffectType: 1
+  EffectValue: 50

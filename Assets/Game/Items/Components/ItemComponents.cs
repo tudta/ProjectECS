@@ -27,6 +27,9 @@ public struct ItemDefinition : IComponentData
     public ItemType Type;
     public int MaxStack;
     public EquipmentSlot Slot;
+
+    public ConsumableEffectType EffectType;
+    public float EffectValue;
 }
 
 // Stat bonuses provided by an item.
@@ -63,6 +66,28 @@ public struct InventoryAddRequest : IBufferElementData
 }
 
 public struct ItemCatalogEntry : IBufferElementData
+{
+    public Entity ItemEntity;
+}
+
+public struct EquipItemRequest : IBufferElementData
+{
+    public Entity ItemEntity;
+}
+
+public struct UnequipItemRequest : IBufferElementData
+{
+    public EquipmentSlot Slot;
+}
+
+public enum ConsumableEffectType : byte
+{
+    None,
+    RestoreHealthFlat,
+    RestoreHealthPercent
+}
+
+public struct ConsumeItemRequest : IBufferElementData
 {
     public Entity ItemEntity;
 }

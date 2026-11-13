@@ -21,6 +21,9 @@ public class InventoryAuthoring : MonoBehaviour
             AddBuffer<InventoryItem>(entity);
             AddBuffer<EquippedItem>(entity);
             AddBuffer<InventoryAddRequest>(entity);
+            AddBuffer<EquipItemRequest>(entity);
+            AddBuffer<UnequipItemRequest>(entity);
+            AddBuffer<ConsumeItemRequest>(entity);
 
             DynamicBuffer<ItemCatalogEntry> catalog =
                 AddBuffer<ItemCatalogEntry>(entity);
