@@ -296,6 +296,7 @@ MonoBehaviour:
   ItemDefinitions:
   - {fileID: 1923937418814116747, guid: a9166cb678eb91943ac0f988d5537d17, type: 3}
   - {fileID: 6779607081422967725, guid: 19633fafa29a9ed4a8da169918edf2d9, type: 3}
+  PickupRadius: 1.5
 --- !u!1001 &4336932485975205496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359,8 +360,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 767744722052938601, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 4336932485975205498}
   m_SourcePrefab: {fileID: 100100000, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
+--- !u!1 &4336932485975205497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767744722052938601, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
+  m_PrefabInstance: {fileID: 4336932485975205496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4336932485975205498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336932485975205497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d4b7694c0f8f444a51c6edeac83079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropAuthoring
+  PickupPrefab: {fileID: 4339142479737379315, guid: 1b658e936a7007d4a856812d91c0fb31, type: 3}
+  LootTable:
+  - ItemPrefab: {fileID: 6779607081422967725, guid: 19633fafa29a9ed4a8da169918edf2d9, type: 3}
+    DropChance: 1
+    MinQuantity: 1
+    MaxQuantity: 2
+  - ItemPrefab: {fileID: 1923937418814116747, guid: a9166cb678eb91943ac0f988d5537d17, type: 3}
+    DropChance: 0.1
+    MinQuantity: 1
+    MaxQuantity: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

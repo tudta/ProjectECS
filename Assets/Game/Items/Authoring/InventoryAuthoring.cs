@@ -7,6 +7,10 @@ public class InventoryAuthoring : MonoBehaviour
     public int Capacity = 30;
     public GameObject[] ItemDefinitions;
 
+    [Header("Item Pickup")]
+    [Min(0.1f)]
+    public float PickupRadius = 1.5f;
+
     public class Baker : Baker<InventoryAuthoring>
     {
         public override void Bake(InventoryAuthoring authoring)
@@ -16,6 +20,11 @@ public class InventoryAuthoring : MonoBehaviour
             AddComponent(entity, new InventoryCapacity
             {
                 Value = Mathf.Max(1, authoring.Capacity)
+            });
+
+            AddComponent(entity, new ItemPickupSettings
+            {
+                Radius = Mathf.Max(0.1f, authoring.PickupRadius)
             });
 
             AddBuffer<InventoryItem>(entity);
