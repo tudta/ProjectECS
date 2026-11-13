@@ -15,7 +15,8 @@ public partial struct CharacterMovementSystem : ISystem
                 RefRO<CharacterMoveCommand>,
                 RefRO<MovementSpeed>,
                 RefRW<LocalTransform>>()
-            .WithAll<CharacterTag>())
+            .WithAll<CharacterTag>()
+            .WithNone<DeadTag>())
         {
             float3 direction = move.ValueRO.Direction;
 

@@ -32,6 +32,14 @@ public partial struct EnemyAISystem : ISystem
             return;
         }
 
+        // Stop dead enemies from continuing their previous movement.
+        foreach (var movement in
+            SystemAPI.Query<RefRW<CharacterMoveCommand>>()
+                .WithAll<EnemyAITag, DeadTag>())
+        {
+            movement.ValueRW.Direction = float3.zero;
+        }
+
         float3 playerPosition =
             SystemAPI.GetComponent<LocalTransform>(player).Position;
 

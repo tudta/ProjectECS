@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5647120153313582193, guid: 02a921d3230872e40bc38fd39a361824, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.74
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647120153313582193, guid: 02a921d3230872e40bc38fd39a361824, type: 3}
       propertyPath: m_LocalPosition.y
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5647120153313582193, guid: 02a921d3230872e40bc38fd39a361824, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647120153313582193, guid: 02a921d3230872e40bc38fd39a361824, type: 3}
       propertyPath: m_LocalRotation.w
@@ -327,31 +327,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 767744722052938601, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 4336932485975205498}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
---- !u!1 &4336932485975205497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 767744722052938601, guid: e23a78bdede61654caa54a43e4cdf52a, type: 3}
-  m_PrefabInstance: {fileID: 4336932485975205496}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4336932485975205498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4336932485975205497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3071fc05c23c3aa4cae342e2b3b64542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackAuthoring
-  HitboxPrefab: {fileID: 880518647513502704, guid: 5cdf8a29b4e981642b58c7de0df60fcd, type: 3}
-  Cooldown: 1.2
-  ForwardOffset: 0.8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
