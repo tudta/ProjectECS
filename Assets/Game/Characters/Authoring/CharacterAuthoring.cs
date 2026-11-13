@@ -24,11 +24,11 @@ public class CharacterAuthoring : MonoBehaviour
             );
 
             AddComponent<CharacterTag>(entity);
+            AddComponent<CharacterMoveCommand>(entity);
 
             if (authoring.IsPlayer)
             {
                 AddComponent<PlayerTag>(entity);
-                AddComponent<CharacterMoveCommand>(entity);
             }
 
             AddComponent(entity, new CharacterFaction
