@@ -12,14 +12,25 @@ public partial struct EnemyAISystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         if (!SystemAPI.TryGetSingletonEntity<PlayerTag>(
-                out Entity player))
-            return;
+                out Entity player) ||
+            !SystemAPI.HasComponent<LocalTransform>(player) ||
+            SystemAPI.HasComponent<DeadTag>(player))
+        {
+            foreach (var (target, aiState, movement) in
+                SystemAPI.Query<
+                    RefRW<EnemyAITarget>,
+                    RefRW<EnemyAIState>,
+                    RefRW<CharacterMoveCommand>>()
+                .WithAll<EnemyAITag>()
+                .WithNone<DeadTag>())
+            {
+                target.ValueRW.Value = Entity.Null;
+                aiState.ValueRW.IsAggro = 0;
+                movement.ValueRW.Direction = float3.zero;
+            }
 
-        if (!SystemAPI.HasComponent<LocalTransform>(player))
             return;
-
-        if (SystemAPI.HasComponent<DeadTag>(player))
-            return;
+        }
 
         float3 playerPosition =
             SystemAPI.GetComponent<LocalTransform>(player).Position;
