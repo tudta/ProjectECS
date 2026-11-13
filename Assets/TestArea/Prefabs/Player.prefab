@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5647120153313582193}
   - component: {fileID: 4742422853009213219}
+  - component: {fileID: 3186127591111536925}
+  - component: {fileID: 1487626771916029567}
   - component: {fileID: 7090325592049990310}
   - component: {fileID: 1356132160020908133}
   m_Layer: 0
@@ -49,9 +51,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAuthoring
   IsPlayer: 1
   Faction: 0
+--- !u!114 &3186127591111536925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945333915349031325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36df0b7bfe91c964f9b5f98a94c4822e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterStatsAuthoring
   MaxHealth: 100
   MovementSpeed: 5
   Armor: 0
+  AttackDamage: 25
+--- !u!114 &1487626771916029567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945333915349031325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d8674a7fec3d43b35fe6d2c8d1989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionAuthoring
+  StartingLevel: 1
+  BaseExperience: 100
+  MaxHealthPerLevel: 10
+  MovementSpeedPerLevel: 0.1
+  ArmorPerLevel: 1
+  AttackDamagePerLevel: 2
 --- !u!114 &7090325592049990310
 MonoBehaviour:
   m_ObjectHideFlags: 0

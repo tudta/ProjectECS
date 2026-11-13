@@ -10,11 +10,6 @@ public class CharacterAuthoring : MonoBehaviour
     [Tooltip("0 = Player, 1 = Enemy")]
     public int Faction;
 
-    [Header("Stats")]
-    public float MaxHealth = 100f;
-    public float MovementSpeed = 5f;
-    public float Armor;
-
     public class Baker : Baker<CharacterAuthoring>
     {
         public override void Bake(CharacterAuthoring authoring)
@@ -34,22 +29,6 @@ public class CharacterAuthoring : MonoBehaviour
             AddComponent(entity, new CharacterFaction
             {
                 Value = authoring.Faction
-            });
-
-            AddComponent(entity, new Health
-            {
-                Current = authoring.MaxHealth,
-                Maximum = authoring.MaxHealth
-            });
-
-            AddComponent(entity, new MovementSpeed
-            {
-                Value = authoring.MovementSpeed
-            });
-
-            AddComponent(entity, new Armor
-            {
-                Value = authoring.Armor
             });
         }
     }
