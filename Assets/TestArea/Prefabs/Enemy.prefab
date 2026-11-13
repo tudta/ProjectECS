@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3575523936302403007}
   - component: {fileID: 2826496013150065590}
   - component: {fileID: 1306813747566489718}
+  - component: {fileID: 6600968209639886652}
   - component: {fileID: 5866772162051037788}
   m_Layer: 0
   m_Name: Enemy
@@ -96,6 +97,28 @@ MonoBehaviour:
   HitboxPrefab: {fileID: 880518647513502704, guid: 5cdf8a29b4e981642b58c7de0df60fcd, type: 3}
   Cooldown: 1.2
   ForwardOffset: 0.8
+--- !u!114 &6600968209639886652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767744722052938601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d4b7694c0f8f444a51c6edeac83079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropAuthoring
+  PickupPrefab: {fileID: 4339142479737379315, guid: 1b658e936a7007d4a856812d91c0fb31, type: 3}
+  LootTable:
+  - ItemPrefab: {fileID: 6779607081422967725, guid: 19633fafa29a9ed4a8da169918edf2d9, type: 3}
+    DropChance: 1
+    MinQuantity: 1
+    MaxQuantity: 2
+  - ItemPrefab: {fileID: 1923937418814116747, guid: a9166cb678eb91943ac0f988d5537d17, type: 3}
+    DropChance: 0.1
+    MinQuantity: 1
+    MaxQuantity: 1
 --- !u!114 &5866772162051037788
 MonoBehaviour:
   m_ObjectHideFlags: 0
