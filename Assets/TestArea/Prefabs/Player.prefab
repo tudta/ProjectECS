@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3186127591111536925}
   - component: {fileID: 1487626771916029567}
   - component: {fileID: 7090325592049990310}
+  - component: {fileID: 1321629449569684374}
   - component: {fileID: 1356132160020908133}
   m_Layer: 0
   m_Name: Player
@@ -99,6 +100,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillCasterAuthoring
   SkillPrefab: {fileID: 5820665294404160101, guid: 2a0554f0d85ad804fbffdca5696e6c61, type: 3}
   Cooldown: 0.5
+--- !u!114 &1321629449569684374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945333915349031325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432c92732a493f4bab05e5949c609d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryAuthoring
+  Capacity: 30
+  ItemDefinitions:
+  - {fileID: 1923937418814116747, guid: a9166cb678eb91943ac0f988d5537d17, type: 3}
+  - {fileID: 6779607081422967725, guid: 19633fafa29a9ed4a8da169918edf2d9, type: 3}
+  PickupRadius: 1.5
 --- !u!114 &1356132160020908133
 MonoBehaviour:
   m_ObjectHideFlags: 0
