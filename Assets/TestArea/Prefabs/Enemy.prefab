@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2826496013150065590}
   - component: {fileID: 1306813747566489718}
   - component: {fileID: 6600968209639886652}
+  - component: {fileID: -1964980502060604678}
   - component: {fileID: 5866772162051037788}
   m_Layer: 0
   m_Name: Enemy
@@ -119,6 +120,19 @@ MonoBehaviour:
     DropChance: 0.1
     MinQuantity: 1
     MaxQuantity: 1
+--- !u!114 &-1964980502060604678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767744722052938601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9430fdfb4bc18ec46899093c1c85f703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceRewardAuthoring
+  Experience: 25
 --- !u!114 &5866772162051037788
 MonoBehaviour:
   m_ObjectHideFlags: 0
