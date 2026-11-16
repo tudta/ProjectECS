@@ -18,6 +18,8 @@ public class FloatingDamageNumber : MonoBehaviour
     private float timer;
     private Color originalColor;
 
+    [SerializeField] private Camera viewCamera;
+
     private void Awake()
     {
         if (damageText != null)
@@ -51,5 +53,19 @@ public class FloatingDamageNumber : MonoBehaviour
 
         if (timer >= lifetime)
             Destroy(gameObject);
+    }
+
+    private void LateUpdate()
+    {
+        if (viewCamera == null)
+            viewCamera = Camera.main;
+
+        if (viewCamera != null)
+            transform.rotation = viewCamera.transform.rotation;
+    }
+
+    public void SetCamera(Camera camera)
+    {
+        viewCamera = camera;
     }
 }

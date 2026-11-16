@@ -97,16 +97,23 @@ public class SkillInputBridge : MonoBehaviour
             new float3(0f, 0f, 1f)
         );
 
+        SkillCaster skillCaster =
+            em.GetComponentData<SkillCaster>(player);
+
+        // Ignore input while the skill is cooling down.
+        if (skillCaster.CooldownRemaining > 0f)
+            return;
+
         DynamicBuffer<SkillCastRequest> requests =
             em.GetBuffer<SkillCastRequest>(player);
 
-        // Keep only one pending cast request.
-        if (requests.Length == 0)
+        // Avoid accumulating multiple requests.
+        if (requests.Length > 0)
+            return;
+
+        requests.Add(new SkillCastRequest
         {
-            requests.Add(new SkillCastRequest
-            {
-                Direction = direction
-            });
-        }
+            Direction = direction
+        });
     }
 }

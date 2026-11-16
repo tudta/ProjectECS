@@ -19,6 +19,8 @@ public class DamagePresentationBridge : MonoBehaviour
     private EntityQuery eventQuery;
     private bool queryCreated;
 
+    [SerializeField] private Camera viewCamera;
+
     private void LateUpdate()
     {
         World currentWorld =
@@ -83,6 +85,7 @@ public class DamagePresentationBridge : MonoBehaviour
                 );
 
                 number.Initialize(damageEvent.Amount);
+                number.SetCamera(viewCamera);
             }
 
             // Hit visual effect.
